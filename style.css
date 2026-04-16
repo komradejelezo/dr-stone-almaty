@@ -5,6 +5,10 @@
 }
 
 body {
+  overflow-x: hidden;
+}
+
+body {
   font-family: Arial, sans-serif;
   color: #fff;
   background: #0b0f1a;
@@ -75,7 +79,8 @@ html {
 }
 
 .logo img {
-  height: 52px;
+  height: 100px;
+  filter: brightness(1.2);
   width: auto;
   display: block;
   border-radius: 10px;
@@ -673,4 +678,51 @@ html {
 
 .contacts a:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 80px;
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .badges {
+    flex-wrap: wrap;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
 }
