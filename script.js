@@ -2,6 +2,36 @@ const images = document.querySelectorAll('.portfolio .item img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const close = document.querySelector('.close');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+
+let currentIndex = 0;
+
+function showImage(index) {
+  lightboxImg.src = images[index].src;
+}
+
+images.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    lightbox.style.display = 'flex';
+    showImage(currentIndex);
+  });
+});
+
+close.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightboxNext.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+});
+
+lightboxPrev.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+});
 
 images.forEach(img => {
   img.addEventListener('click', () => {
