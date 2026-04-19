@@ -789,3 +789,35 @@ html {
   width: 26px;
   height: 26px;
 }
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.nav a {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+}
+
+.hero h1 {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.hero h1 {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
