@@ -846,3 +846,24 @@ html {
 .hero h1 {
   overflow-wrap: break-word;
 }
+
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap; /* запрещаем перенос */
+}
+
+.badges span {
+  white-space: nowrap; /* текст не ломается */
+}
+
+@media (max-width: 768px) {
+  .badges {
+    gap: 8px;
+  }
+
+  .badges span {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
