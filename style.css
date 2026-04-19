@@ -821,3 +821,28 @@ html {
   overflow-wrap: normal;
   hyphens: none;
 }
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+    padding-right: 10px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+}
+
+.hero h1 {
+  overflow-wrap: break-word;
+}
